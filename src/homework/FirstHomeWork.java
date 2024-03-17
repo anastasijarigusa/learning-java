@@ -31,13 +31,27 @@ public class FirstHomeWork {
                 System.out.println("3. " + age + "y.o is Adult");
 
     //Task 4. Leap year checker
-
-        int year = 2024;
-            if (year%4==0) {
-                System.out.println("4. " + year + " is Leap year");
-             }
+        
+        int year = 1900;
+        boolean leap = true;
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0)
+                    leap = true;
+                else
+                    leap = false;
+            }
             else
-                System.out.println("4. " + year + " is not Leap year");
+                leap = true;
+        }
+        else
+            leap = false;
+
+        if (leap)
+            System.out.println("4. " + year + " is Leap year");
+        else
+            System.out.println("4. " + year + " is not Leap year");
+
 
     //Task 5. Multiple conditions
 
